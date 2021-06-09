@@ -5,6 +5,7 @@
         <title>
             Avon Trophies
         </title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
     </head>
 
     <body>
@@ -28,15 +29,20 @@
             <div class="nav">
                 <a href = "about.html">About Us</a>
             </div>
+            <div class="nav_1">
+                <span onclick="openNav()">☰</span>
+                </div>
         </div>
 
+        <div id="block"></div>
+        
+        
         <div class="head">
 
-        </div>
-        
+        </div>        
         <div class="slideshow-container">
             <div id="cross">
-              <svg height="90%" width="100%" style="position: absolute">
+              <svg height="90vh" width="100%" style="position: absolute">
                 <line x1="0" y1="0" x2="55%" y2="45%" />
                 <line x1="100%"" y1="100%" x2="45%" y2="55%" />
                 <line x1="0" y1="100%" x2="100%" y2="0" />
@@ -68,9 +74,15 @@
                 slides[slideIndex-1].style.display = "block";
                 setTimeout(showSlides, 2000);
             }
+
+            
+            function openNav() {
+                document.getElementById("block").style.width = "block";
+            }
+
+            function closeNav() {
+                document.getElementById("block").style.width = "0";
+            }
         </script>
-
-
-
     </body>
 </html>
